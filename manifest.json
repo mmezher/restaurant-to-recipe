@@ -1,0 +1,38 @@
+//Monique Mezher's manifest.json file for Restuarant to Recipe, 1/17/2017
+
+{
+	"manifest_version": 2,
+	"name": "Restaurant to Recipe",
+	"version": "1.0",
+
+	//"default_locale": "en",
+	"description": "Suggests recipes to make when looking for restuarants",
+	//"icons": {}, //need to do later; 16x16, 48x48, 128x128
+
+
+	"browser_action": {
+		"default_icon": "rtr.png"
+	},
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+	//		"16": "images/recipe16.png",
+	//		"24": "images/recipe24.png",
+	//		"32": "images/icon32.png"
+	//	},
+	//	"default_title": "Recipe Suggestion",
+	//	"default_popup": "popup.html"
+	//}
+
+	// "permissions": [
+	// 	"tabs"], 
+	 "content_scripts": [
+		{
+	 		"matches": ["https://www.yelp.com/*food*"],
+	 		"js": ["jquery-3.1.1.min.js","content.js"]
+	 }
+	]
+
+		
+}
