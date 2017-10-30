@@ -1,6 +1,8 @@
 //Monique Mezher's restaurant to recipe content.js file. 1/17/2017
+//10/30/2017: Added some nifty comments
 
 //content.js for Restaurant to Recipe
+//Food is split into its different phrases and looked up using Food Network. Next will be to find more useful recipe sites.
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse){
 		if(request.message==="clicked_browser_action" ){
